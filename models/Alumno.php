@@ -74,6 +74,7 @@ class Alumno
         $stmt->bindParam(':apellidos', $this->apellidos);
         $stmt->bindParam(':fechaNacimiento', $this->fechaNacimiento);
         $stmt->bindParam(':repite', $this->repite, PDO::PARAM_INT);
+        $stmt->bindParam(':numAlumno', $this->numAlumno, PDO::PARAM_INT);
 
         if ($stmt->execute()) {
             return true;
